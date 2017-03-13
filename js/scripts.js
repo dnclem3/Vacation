@@ -5,7 +5,7 @@ var places = [["Indonesia", "https://www.intrepidtravel.com/adventures/wp-conten
 
 $(document).ready(function() {
   var output = function(friends, duration, hobby) {
-    if ((friends == "false" && duration == "long" && hobby == "cultural") || (friends = "false" && duration == "medium" && hobby == "cultural")) {
+    if ((friends == "false" && duration == "long" && hobby == "culture") || (friends = "false" && duration == "medium" && hobby == "culture")) {
       cover = "https://image.jimcdn.com/app/cms/image/transf/dimension=1190x10000:format=jpg/path/sa6549607c78f5c11/image/i188843b7879a1e0d/version/1454325588/kotor-best-hidden-gems-in-europe-european-best-destinations-copyright-oleg-p.jpg";
       destination = "Greece";
     } else if ((duration == "long" && hobby == "adventure") || (friends == "false" && duration == "medium" && hobby == "adventure")) {
@@ -26,13 +26,20 @@ $(document).ready(function() {
     var friends = $("#friends").val();
     var name = $("#name").val();
 
-    $("span.name").text(name);
     output(friends, duration, hobby);
 
-    var statement = name + " we think you should travel to " + destination;
+    $("span.duration").text(duration);
+    $("span.hobby").text(hobby);
+    $("span.name").text(name);
+    $("span.destination").text(destination);
+
     var headline = "Your perfect vacation is " + destination;
     $(".jumbotron").css("background-image", "url(" + cover + ")");
     $("h1#destination").text(headline);
-    $("p#destination").empty().text(statement);
+    $("p#destination").empty();
+  });
+  $("#repeat").click(function() {
+    $("#output").hide();
+    $("form").show();
   });
 });

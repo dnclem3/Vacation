@@ -8,6 +8,7 @@ body {
   margin-right: -20px;
   min-height: 500px;
   background-size: cover;
+  color: white;
 }
 #output {
   display:none;
