@@ -9,6 +9,6 @@ body {
   min-height: 500px;
   background-size: cover;
 }
-.output {
+#output {
   display:none;
 }

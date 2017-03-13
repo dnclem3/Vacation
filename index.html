@@ -15,8 +15,8 @@
   <body>
     <div class="container-fluid">
       <div class="jumbotron">
-        <h1 class="text-center">Find your vacation</h1>
-        <p class="text-center">Just answer five short questions and set sail on your getaway.</p>
+        <h1 class="text-center" id="destination">Find your vacation</h1>
+        <p class="text-center" id="destination">Just answer five short questions and set sail on your getaway.</p>
       </div>
       <form>
         <div class="form-group">
@@ -49,10 +49,10 @@
             <option value="cultural">Cultural</option>
             <option value="foodie">Foodie</option>
           </select>
-          <button type="button" name="button" class="btn btn-success">Get Your Recommendation</button>
         </div>
+        <button type="submit" name="button" class="btn btn-success">Get Your Recommendation</button>
       </form>
-      <div class="output">
+      <div id="output">
         <p><span class="name"></span> we think you should travel to <span class="destination"></span></p>
       </div>
     </div>
