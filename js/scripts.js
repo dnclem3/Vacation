@@ -41,5 +41,7 @@ $(document).ready(function() {
   $("#repeat").click(function() {
     $("#output").hide();
     $("form").show();
+    $("h1#destination").text("Find your vacation");
+    $("p#destination").text("Just answer five short questions and set sail on your getaway.");
   });
 });
